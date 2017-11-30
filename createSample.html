@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create sample</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<span id="timer">
+			
+	</span><br />
+	<input type="text" id="keyInput"><br />
+	<textarea id="result"></textarea>
+</body>
+<script type="text/javascript" defer>
+		function displayTime (){
+			var time = (Date.now() - start)
+			minutes = Math.floor(time/60000);
+			seconds = Math.floor( (time % 60000 ) / 1000)
+			milliseconds = time % 1000;
+			document.getElementById("timer").innerHTML = minutes+":"+seconds+"."+milliseconds ;
+			setTimeout( displayTime, "100" );
+		}
+		function add(a){
+			
+
+			document.getElementById("result").value = a +"\n" + document.getElementById("result").value
+		}
+		var start = null;
+		function markDown( key ){
+			
+
+			if( key.key == 'b'){
+				var time = Date.now() - start;
+				minutes = Math.floor(time/60000);
+				seconds = Math.floor( (time % 60000 ) / 1000)
+				milliseconds = time % 1000;
+				
+				add("Brady : " + time +"; "+minutes+":"+seconds+"."+milliseconds);
+			}else if( key.key == 'g'){
+				var time = Date.now() - start;
+				minutes = Math.floor(time/60000);
+				seconds = Math.floor( (time % 60000 ) / 1000)
+				milliseconds = time % 1000;
+
+				add("Grey : " + time +"; "+minutes+":"+seconds+"."+milliseconds);
+			}else if( key.key == 's'){
+				start = Date.now() + 3000;
+				document.getElementById("result").value="";
+			}
+			document.getElementById('keyInput').value=""
+		}
+		document.getElementById('keyInput').addEventListener("keypress", markDown);
+		displayTime();
+	</script>
+</html>

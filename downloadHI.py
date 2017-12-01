@@ -1,5 +1,11 @@
 import urllib2
 
+####
+#	Download every episode into HI/ folder
+#	May take a few hours depending on the connexion ( around 11GB )
+####
+
+
 filelist = [
 "http://traffic.libsyn.com/hellointernet/HI_93_Final_Yes_This_One.mp3",
 "http://traffic.libsyn.com/hellointernet/HI92.mp3",

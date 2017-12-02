@@ -10,6 +10,8 @@ In order of usage :
 - Display the statistics generated with D3 (website/index.html)
 
 
+*The file whoTalks.json contains the data for every episode. The key is the episode and the value is a string with the data. To extract the data, use the position of each char in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_" divide this position by 63, and the value is the probability of grey talking, the probability of grey talking is always 1-p(brady), example 'b' = 1/63 = 1.6%, meaning 98.4% brady. The index of the char in the string is the time from the start in second (i.e. : Each char represent 1 second)*
+
 Blue is Grey  
 Red is hard as nail  
 

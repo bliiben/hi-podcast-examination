@@ -24,7 +24,7 @@ predict_fn = predictor.from_saved_model("exportedmodel3/1512120452",signature_de
 
 # Load every files
 result = {}
-filenames = map( lambda x : str(x)+".mp3", range(1,98))
+filenames = map( lambda x : str(x)+".mp3", range(1,94))
 filenames.append("The_Shortlist.mp3")
 
 # Every podcast
@@ -71,7 +71,7 @@ for filename in filenames:
 
 	result[filename] = secondSerie
 
-# Saving the result
-print ("Saving ")
-with open("whoTalks.json","w") as file:
-	json.dump( result, file )
+	# Saving the result
+	print ("Saving ")
+	with open("whoTalks.json","w") as file:
+		json.dump( result, file )

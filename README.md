@@ -9,7 +9,18 @@ In order of usage :
 - Generate a Json file with the model that contains the series of probability of being on member of the podcast (*generateStatsFromModel.py*)
 - Display the statistics generated with D3 (website/index.html)
 
+
+Blue is Grey  
+Red is hard as nail  
+
+## Talking length at any time  
 ![Alt text](result_images/talking_length.png?raw=true "Talking length at any time")
+
+## Talking repartition over the episode  
 ![Alt text](result_images/talking_repartition.png?raw=true "Talking repartition over the episode")
+
+## Who talks more on the episode
 ![Alt text](result_images/whoTalksMoreByEpisode.png?raw=true "Who talks more on the episode")
+
+## Sorted by who talks more
 ![Alt text](result_images/whoTalksMoreSorted.png?raw=true "Sorted by who talks more")

@@ -16,7 +16,7 @@ var episodes;
 var SVG_WIDTH = parseInt(d3.select("#chart").style("width"));
 var SCREEN_WIDTH = ( SVG_WIDTH - (2*MARGIN_SIZE))
 var BAR_SIZE = (SCREEN_WIDTH / MAX_LENGTH);
-var X_scale = d3.scaleLinear().range([0,180]).domain([0,1])
+var X_scale = d3.scaleLinear().range([0,100]).domain([0,1])
 var EPISODE_HEIGHT =15;
 
 
@@ -59,7 +59,7 @@ function init(){
 			.attr("height",EPISODE_HEIGHT+"px")
 			.attr("style",function(d,i){
 				//console.log("hsl("+Math.round(X_scale(d))+", 100, 63)");
-				return "fill:hsl("+Math.round(X_scale(d))+", 100%, 63%)";
+				return "fill:hsl(42, "+Math.round(X_scale(d))+"%, 59%)";
 			} );
 
 	episodes.append("text")

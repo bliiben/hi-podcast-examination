@@ -4,3 +4,4 @@ model2/*
 *.wav
 *.pp
 addthismanually.txt
+bower_components
